@@ -3,10 +3,17 @@ variable "api_key" {
   type = string
 }
 
-variable "org_name" {
-  description = "The name of the organization"
-  type = string
+variable "meraki_organizations" {
+  description = "The organizations in the Meraki dashboard"
+  type = object({
+    org = string
+  })
 }
+
+#variable "org_name" {
+#  description = "The name of the organization"
+#  type = string
+#}
 
 /* variable "meraki_base_url" {
   description = "The base URL for the Meraki dashboard"
