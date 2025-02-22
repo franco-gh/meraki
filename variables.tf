@@ -1,24 +1,24 @@
 variable "api_key" {
-  description = "The Meraki API key"
-  type        = string
-  sensitive   = true
+  description = "The API key for the Meraki dashboard"
+  type = string
 }
 
-variable "mx_serial" {
+variable "org_name" {
+  description = "The name of the organization"
+  type = string
+}
+
+/* variable "meraki_base_url" {
+  description = "The base URL for the Meraki dashboard"
+  type = string
+} */
+
+/* variable "mx_serial" {
   description = "The serial number of the MX device"
-  type        = string
-  sensitive = true  
-}
+  type = string
+} */
 
-/* variable "ms_serial" {
-  description = "The serial number of the MS device"
-  type        = string
-  sensitive = true  
-}
-
-variable "org_id" {
-  description = "The organization ID"
-  type        = string
-  sensitive = true  
-}
-*/
+/* variable "meraki_organization_id" {
+  description = "The ID of the Meraki organization"
+  type = string
+} */
