@@ -1,23 +1,13 @@
-# Devices
-import {
-  to = meraki_network_device.devices
-  id = "NETWORK_ID:SERIAL"
-}
+#import {
+#  to = meraki_organizations.example
+#  id = var.meraki_organization_id
+#}
 
-# Networks
-import {
-  to = meraki_network.networks
-  id = "NETWORK_ID"
-}
+#resource "meraki_devices_appliance_uplinks_settings" "example" {
+#  serial          = var.mx_serial
+#}
 
-# Organizations
-import {
-  to = meraki_organization.orgs
-  id = "ORG_ID"
+/* data "meraki_organization" "org1" {
+  name = "Michal Rosenn"
 }
-
-# VLANs
-import {
-  to = meraki_network_vlan.vlans
-  id = "NETWORK_ID:VLAN_ID"
-}
+*/
