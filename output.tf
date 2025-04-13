@@ -3,11 +3,9 @@ output "organizations" {
   value = local.organizations
 }
 
-output "meraki_organization_inventory_devices" {
-  description = "Inventory devices for each organization"
-  value = {
-    for org_id, devices in data.meraki_organization_inventory_devices.inventory_devices : org_id => devices.items
-  }
+output "meraki_organizations_devices" {
+  description = "Devices for each organization"
+  value = local.inventory
 }
 
 /* output "meraki_organizations_org" {

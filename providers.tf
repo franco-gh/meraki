@@ -1,12 +1,12 @@
 terraform {
   required_providers {
     meraki = {
-      source = "CiscoDevNet/meraki"
-      version = ">= 0.1.6"
+      source = "cisco-open/meraki"
+      version = "1.0.2-beta"
     }
   }
 }
 
 provider "meraki" {
-  api_key = var.api_key
+  meraki_dashboard_api_key = var.api_key
 }

@@ -7,6 +7,7 @@
 #  serial          = var.mx_serial
 #}
 
-data "meraki_organization" "org1" {
+/* data "meraki_organization" "org1" {
   name = "Michal Rosenn"
 }
+*/
