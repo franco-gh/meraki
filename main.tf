@@ -1,6 +1,11 @@
 data "meraki_organizations" "org" {
 }
 
+# Data source to retrieve all Meraki devices for the first organization
+data "meraki_devices" "all_devices" {
+organization_id = data.meraki_organizations.org.items[0].id
+}
+
 locals {
   organizations = {
   for org in data.meraki_organizations.org.items : org.id => org
