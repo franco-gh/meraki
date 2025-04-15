@@ -1,3 +1,8 @@
+variable "network_location" {
+  type        = string
+  description = "Location key for the network (e.g., 'nyc', 'dal')"
+}
+
 variable "api_key" {
   description = "The API key for the Meraki dashboard"
   type = string
@@ -6,8 +11,13 @@ variable "api_key" {
 variable "meraki_organizations" {
   description = "The organizations in the Meraki dashboard"
   type = object({
-    org = string
+  org = string
   })
+}
+
+variable "network_id" {
+  description = "The ID of the network"
+  type = string
 }
 
 #variable "org_name" {
